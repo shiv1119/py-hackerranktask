@@ -1,18 +1,12 @@
-x = int(input("size:"))
-stu = []
-record = []
-for i in range (0,x):
-    stu.append(input(""))
-    stu.append(input())
-    record.append(stu)
-    stu = []  
-print(record)
-temp_record = []
-for i in record:
-    if i not in temp_record:
-        temp_record.append(i)
-record = temp_record
-my_list = []
-my_list.append(record.pop(record.index(max(record))))
-x = record
-print(max(x))
+if __name__ == '__main__':
+    result = []
+    score_list = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        result += [[name,score]]
+        score_list += [score]
+    b = sorted(list(set(score_list)))[1]
+    for a,c in sorted(result):
+       if c==b:
+        print(a) 
